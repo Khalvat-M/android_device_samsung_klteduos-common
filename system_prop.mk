@@ -92,21 +92,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM \
-    ro.use_data_netmgrd=true \
-    ro.baseband.arch=msm \
-    ro.data.large_tcp_window_size=true \
-    ro.ril.telephony.mqanelements=5 \
-    ro.ril.hsupa.category=6 \
-    ro.ril.def.agps.mode=1 \
-    ro.telephony.default_network=9 \
-    ro.telephony.call_ring.multiple=0 \
-    persist.radio.apm_sim_not_pwdn=1 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.qmi.adb_logmask=0 \
-    persist.telephony.oosisdc=false \
-    persist.qcril.disable_retry=true
+    persist.radio.add_power_save=1 \
+    rild.libpath=/system/vendor/lib/libsec-ril.so \
+    ro.telephony.mms_data_profile=5 \
+    ro.ril.telephony.qan_resp_strings=6 \
+    ro.telephony.call_ring.multiple=0 \
+    persist.radio.multisim.config=dsds \
+    ro.multisim.audio_follow_default_sim=false \
+    ro.multisim.simslotcount=2 \
+    ro.multisim.set_audio_params=true \
+    ro.telephony.ril.config=simactivation
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \

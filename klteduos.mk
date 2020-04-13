@@ -253,9 +253,7 @@ PRODUCT_COPY_FILES += \
 # Radio
 PRODUCT_PACKAGES += \
     libsecnativefeature \
-    libcnefeatureconfig \
-    librmnetctl \
-    libxml2
+    rild_dsds.rc
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -323,10 +321,10 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
 # System Properties
-$(call inherit-product, device/samsung/klte-common/system_prop.mk)
+$(call inherit-product, device/samsung/klteduos-common/system_prop.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/klteduos/klteduos-vendor.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/msm8974-common/msm8974-common-vendor.mk)

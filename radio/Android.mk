@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +15,12 @@
 # limitations under the License.
 #
 
-# NFC
-$(call inherit-product, device/samsung/klteduos-common/nfc/product.mk)
+LOCAL_PATH:= $(call my-dir)
 
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl \
-    libpn547_fw
-
-PRODUCT_COPY_FILES += \
-    device/samsung/klteduos-common/nfc/pn547/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    device/samsung/klteduos-common/nfc/pn547/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+include $(CLEAR_VARS)
+LOCAL_MODULE               := rild_dsds.rc
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_SRC_FILES            := rild_dsds.rc
+LOCAL_MODULE_RELATIVE_PATH := init
+LOCAL_VENDOR_MODULE        := true
+include $(BUILD_PREBUILT)
