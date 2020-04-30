@@ -327,7 +327,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/samsung/klteduos-common/system_prop.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klteduos/klteduos-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/klteduos-common/klteduos-vendor.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/msm8974-common/msm8974-common-vendor.mk)

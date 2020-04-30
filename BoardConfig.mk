@@ -203,7 +203,7 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 
 # inherit from the proprietary version
--include vendor/samsung/klteduos/BoardConfigVendor.mk
+-include vendor/samsung/klteduos-common/BoardConfigVendor.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/msm8974-common/BoardConfigVendor.mk
